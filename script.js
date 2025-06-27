@@ -27,11 +27,11 @@ function enviarMensagem() {
     ]
   };
 
-  fetch(`https://api.z-api.io/instances/${instanceId}/send-button-actions`, {
+  fetch(`https://api.z-api.io/instances/${instanceId}/token/${instanceToken}/send-button-actions`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      "Authorization": `Bearer ${instanceToken}`
+      // Não precisa mais do cabeçalho Authorization ou Client-Token
     },
     body: JSON.stringify(payload)
   })
