@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Painel WhatsApp - Unlock Apple</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f2f2f2; padding: 40px; }
+    .container { max-width: 500px; margin: auto; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    h2 { text-align: center; color: #333; }
+    label { font-weight: bold; display: block; margin-top: 15px; }
+    input, textarea { width: 100%; padding: 10px; margin-top: 5px; border-radius: 5px; border: 1px solid #ccc; }
+    button { width: 100%; padding: 15px; background: #25D366; border: none; color: white; font-weight: bold; margin-top: 20px; border-radius: 5px; cursor: pointer; }
+    button:hover { background: #128C7E; }
+    #log { margin-top: 20px; white-space: pre-wrap; background: #f9f9f9; padding: 10px; border-radius: 5px; border: 1px solid #ccc; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Painel WhatsApp - Unlock Apple</h2>
+
+    <label for="numero">Número do Cliente (com DDI, sem +):</label>
+    <input type="text" id="numero" placeholder="Ex: 5511999999999" />
+
+    <label for="mensagem">Mensagem:</label>
+    <textarea id="mensagem" rows="4" placeholder="Digite sua mensagem..."></textarea>
+
+    <label for="tituloBotao">Título do Botão:</label>
+    <input type="text" id="tituloBotao" placeholder="Ex: Acessar Suporte" />
+
+    <label for="linkBotao">Link do Botão:</label>
+    <input type="text" id="linkBotao" placeholder="https://unlockapple.com/suporte" />
+
+    <button onclick="enviarMensagem()">Enviar Mensagem</button>
+
+    <div id="log"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
