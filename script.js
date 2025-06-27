@@ -30,9 +30,9 @@ function enviarMensagem() {
   fetch(`https://api.z-api.io/instances/${instanceId}/token/${instanceToken}/send-button-actions`, {
     method: "POST",
     headers: {
-      "Content-Type": "application/json",
-      "Client-Token": instanceToken // ✅ cabeçalho necessário
-    },
+  "Content-Type": "application/json",
+  "Authorization": `Bearer ${instanceToken}`
+}
     body: JSON.stringify(payload)
   })
   .then(response => response.json())
