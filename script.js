@@ -2,10 +2,10 @@ const instanceId = "3E35940B51C1C013896CD24EFB273D33";
 const instanceToken = "EBD857C4A382BEE196399FA6";
 
 function enviarMensagem() {
-  const numero = document.getElementById("numero").value;
-  const mensagem = document.getElementById("mensagem").value;
-  const tituloBotao = document.getElementById("tituloBotao").value;
-  const linkBotao = document.getElementById("linkBotao").value;
+  const numero = document.getElementById("numero").value.trim();
+  const mensagem = document.getElementById("mensagem").value.trim();
+  const tituloBotao = document.getElementById("tituloBotao").value.trim();
+  const linkBotao = document.getElementById("linkBotao").value.trim();
   const log = document.getElementById("log");
 
   if (!numero || !mensagem || !tituloBotao || !linkBotao) {
@@ -33,7 +33,9 @@ function enviarMensagem() {
       "Content-Type": "application/json",
       "Client-Token": instanceToken
     },
-    body: JSON.stringify(payload)
+    body: JSON.stringify(payload),
+    mode: 'cors',
+    credentials: 'include'
   })
   .then(response => response.json())
   .then(data => {
