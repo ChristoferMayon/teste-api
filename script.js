@@ -31,7 +31,7 @@ function enviarMensagem() {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      // Não precisa mais do cabeçalho Authorization ou Client-Token
+      "Client-Token": instanceToken
     },
     body: JSON.stringify(payload)
   })
